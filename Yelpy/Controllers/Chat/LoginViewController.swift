@@ -32,7 +32,7 @@ class LoginViewController: UIViewController {
         if usernameAndPasswordNotEmpty() {
             // initialize a user object
             let newUser = PFUser()
-            
+        
             // set user properties
             newUser.username = usernameTextField.text
             newUser.password = passwordTextField.text
@@ -48,6 +48,8 @@ class LoginViewController: UIViewController {
                     
                 }
             }
+        } else {
+            displayError()
         }
         
     }
