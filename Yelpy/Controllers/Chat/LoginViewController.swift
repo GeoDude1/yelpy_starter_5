@@ -70,10 +70,11 @@ class LoginViewController: UIViewController {
                     print("User \(username) logged in successfully")
                     // display view controller that needs to shown after successful login
                     NotificationCenter.default.post(name: NSNotification.Name("login"), object: nil)
-
                     
                 }
             }
+        } else {
+            displayError()
         }
         
     }
