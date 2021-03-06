@@ -43,6 +43,11 @@ class RestaurantsViewController: UIViewController {
         // Get Data from API
         getAPIData()
         
+        // stop animations
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            <#code#>
+        }
+        
         yelpRefresh.addTarget(self, action: #selector(getAPIData), for: .valueChanged)
         tableView.refreshControl = yelpRefresh
     }
